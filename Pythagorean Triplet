@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int max(int a , int b ,int c)
+{ if(a>b && b>c) {return a;}
+else if (b>a && b>c)  {return b;}
+else {return c;}
+}
+
+int main()
+{
+    // pythagorean triplet triplet
+    int a , b, c, m=0, p=0;
+    cin>>a>>b>>c;
+    m=max(a , b,c);
+    if(m==a) {p= pow(b,2) +pow(c,2);}
+    else if(m==b) {p= pow(a,2)+pow(c,2);}
+    else{p= pow(b,2)+pow(a,2);}
+    m=pow(m,2);
+    if(m==p) cout<<"yes";
+    else cout<<"no";
+    
+
+    return 0;
+}
