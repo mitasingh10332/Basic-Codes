@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
 //octal to decimal
-cout<<"enter a binary no.:"<<endl;
+cout<<"enter a octal no.:"<<endl;
  int b,d,s=0,a=0;
 cin>>b;
 while(b>0)
