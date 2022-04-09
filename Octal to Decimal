@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+//octal to decimal
+cout<<"enter a binary no.:"<<endl;
+ int b,d,s=0,a=0;
+cin>>b;
+while(b>0)
+{
+    int m;
+    m=b%10;
+    s+= m *(pow(8,a));
+    a++;
+    b=b/10;
+}
+cout<<s;
+    return 0;
+}
