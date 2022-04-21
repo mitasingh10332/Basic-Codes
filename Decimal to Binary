@@ -1,0 +1,31 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int db(int n)
+{
+    int x=1,ans=0;
+    while (x<=n)
+    {
+        x=x*2;
+    }
+    
+    x=x/2;
+
+    while(x>0)
+    {
+        int lastdigit=n/x;
+        n=n- lastdigit*x;
+        x/=2;
+        ans=ans*10 +lastdigit;
+    }
+    return ans;
+}
+int main()
+{
+    //decimal to binary
+    int n;
+    cin >>n;
+    cout<< db(n);
+    return 0;
+}
