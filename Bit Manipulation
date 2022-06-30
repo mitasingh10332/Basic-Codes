@@ -1,0 +1,42 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int getbit(int n ,int i)
+{
+    return ((n&(1<<i))!=0);
+}
+
+int setbit(int n , int i)
+{
+   return (n|(1<<i));
+}
+
+int clearbit(int n , int i)
+{
+    int mask= ~(1<<i);
+    return (n&mask);
+}
+int updatebit(int n , int i , int x)
+{
+    int mask= ~(1<<i);
+    n=(n&mask);
+    return (n|(x<<i));
+    }
+
+int main(){
+
+    int n,i;
+    cin>>n>>i;
+    cout<<getbit(n,i)<<endl;
+    cout<<setbit(n,i)<<endl;
+    cout<<clearbit(n,i)<<endl;
+    int x;//value by which we need to update
+    cout<<"value of x:"<<endl;
+    cin>>x;
+    cout<<updatebit(n,i,x);
+
+
+    return 0;
+
+}
